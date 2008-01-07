@@ -7,7 +7,7 @@ except ImportError:
 
 setup(
     name='ZipLookup',
-    version="",
+    version="0.1",
     #description='',
     #author='',
     #author_email='',
