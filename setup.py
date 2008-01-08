@@ -16,8 +16,7 @@ setup(
     packages=find_packages(exclude=['ez_setup']),
     include_package_data=True,
     test_suite='nose.collector',
-    package_data={'ziplookup': ['i18n/*/LC_MESSAGES/*.mo',
-                                'data/zipcode.db']},
+    package_data={'ziplookup': ['i18n/*/LC_MESSAGES/*.mo']},
     exclude_package_data={'ziplookup': ['data/*.bz2']},
     #message_extractors = {'ziplookup': [
     #        ('**.py', 'python', None),

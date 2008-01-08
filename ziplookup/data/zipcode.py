@@ -36,6 +36,8 @@ def update_dbhash_from_csv():
 def get_zipcode_info(zipcode):
     global _db
     if _db is None:
+        if not os.path.exists(DB_PATH):
+            update_dbhash_from_csv()
         _db = anydbm.open(DB_PATH, 'r')
     return _db[zipcode]
 
