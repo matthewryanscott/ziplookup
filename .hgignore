@@ -4,3 +4,4 @@ syntax:glob
 *.db
 build/*
 dist/*
+*.csv

@@ -1,4 +1,4 @@
-from bz2 import BZ2File
+from gzip import GzipFile
 import csv
 import anydbm
 import os
@@ -6,7 +6,7 @@ from simplejson import dumps
 
 
 DATA_PATH = os.path.abspath(os.path.dirname(__file__))
-CSV_PATH = os.path.join(DATA_PATH, 'zipcode.csv.bz2')
+CSV_PATH = os.path.join(DATA_PATH, 'zipcode.csv.gz')
 DB_PATH = os.path.join(DATA_PATH, 'zipcode.db')
 
 
@@ -14,7 +14,7 @@ _db = None
 
 
 def update_dbhash_from_csv():
-    f = BZ2File(CSV_PATH, 'rU')
+    f = GzipFile(CSV_PATH, 'rb')
     r = csv.DictReader(f)
     # Create the new database.
     tmp_db_path = DB_PATH + '.tmp'
