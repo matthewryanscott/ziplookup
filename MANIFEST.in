@@ -1,3 +1,3 @@
 recursive-include ziplookup/public *
 recursive-include ziplookup/templates *
-recursive-include ziplookup/data *.bz2
+recursive-include ziplookup/data *.gz
